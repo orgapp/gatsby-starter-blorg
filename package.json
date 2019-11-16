@@ -1,0 +1,41 @@
+{
+  "name": "gatsby-starter-blorg",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby and org-mode",
+  "version": "1.0.0",
+  "author": "Xiaoxing Hu <xiaoxing@huxx.org>",
+  "dependencies": {
+    "gatsby": "^2.15.36",
+    "gatsby-theme-blorg": "^1.8.12",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby",
+    "blog",
+    "org-mode",
+    "orga"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "predevelop": "rm -rf .cache",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orgapp/gatsby-starter-blorg"
+  },
+  "bugs": {
+    "url": "https://github.com/orgapp/gatsby-starter-blorg/issues"
+  }
+}
