@@ -1,0 +1,35 @@
+#+TITLE: Example
+#+ORGA_PUBLISH_KEYWORD: PUBLISHED
+#+TODO: TODO NEXT | DONE
+#+TODO: DRAFT | PUBLISHED
+
+* PUBLISHED Random Post on a Monday :random:lorem:
+CLOSED: [2019-10-14 Mon 11:42]
+:PROPERTIES:
+:SUMMARY: Some text generated randomly.
+:END:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis ultricies sem sit amet laoreet. Morbi rutrum congue sapien eget interdum. Etiam luctus, tortor eget pellentesque lacinia, lacus quam tempor enim, eget dictum nisl lectus ut neque. Nullam a risus nisl. Aenean sit amet enim porttitor, porta ligula gravida, consequat lorem. Mauris nisi est, eleifend id magna et, dignissim dictum nibh. Morbi faucibus tristique eros, ac blandit turpis ultricies at. Aliquam erat volutpat. Aenean eget lorem id justo gravida fringilla. Vivamus eleifend, felis a congue porttitor, tortor metus pretium dui, et rutrum magna lacus id quam. Nulla eget faucibus nisl. Praesent eget commodo nisi, sit amet tempus justo. Phasellus eget molestie ligula, luctus fermentum felis. In eget sapien ut turpis lobortis pellentesque. Nam a malesuada lectus.
+
+Quisque hendrerit, nisl vel vulputate tempor, turpis sem cursus leo, vitae lacinia ex felis sed erat. Cras in tristique massa. In hac habitasse platea dictumst. Suspendisse eget lectus sed tellus egestas maximus vitae quis erat. Donec aliquet mattis orci, eu aliquet magna porta at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vestibulum sodales iaculis. Proin a dictum ex, a maximus erat. Vestibulum sagittis, orci egestas elementum imperdiet, leo dui hendrerit mauris, eget facilisis libero ipsum nec ligula. Aenean eget finibus dolor, ultricies fringilla est.
+
+Proin convallis elementum orci eu vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin at nibh porttitor mi feugiat placerat. Aliquam erat volutpat. Donec vulputate mollis volutpat. Integer facilisis, urna sed facilisis pretium, metus mi vehicula mi, dictum pharetra orci augue ac lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nisl nisi, consequat eu arcu eget, mattis iaculis lacus. Nulla mollis sapien tincidunt urna pharetra, ac tempus nunc venenatis. Pellentesque nec augue leo. Nulla facilisi.
+
+Sed ornare purus ac massa ornare feugiat. Fusce sit amet sollicitudin erat. Maecenas sagittis ac velit nec dictum. Curabitur consectetur in dolor vitae porta. Praesent non molestie tortor. In nisl lorem, blandit eget sodales eget, gravida id purus. Maecenas vitae metus sit amet sapien consectetur dignissim et et arcu. Vestibulum facilisis ornare sem, ac pulvinar magna dapibus at. Donec vitae ultricies ligula. Maecenas libero risus, ultrices at leo iaculis, varius sagittis dui. Etiam scelerisque ut metus ac aliquam. Morbi blandit est nec nisi eleifend, vel cursus sapien mattis. Cras ligula metus, mollis ac euismod eu, suscipit at erat. Etiam at fermentum nisi.
+
+Proin a nulla vel ante posuere egestas. Vestibulum in accumsan risus. Sed nec arcu et nisi scelerisque varius eget at lacus. Curabitur congue orci in erat gravida, vel sodales justo condimentum. Praesent pharetra laoreet sem ac feugiat. Proin tincidunt vulputate aliquam. Pellentesque molestie ligula a sapien tristique porta. Sed velit mauris, hendrerit feugiat convallis in, vulputate et sapien. Mauris dolor felis, faucibus vitae magna ultrices, vehicula laoreet velit. Proin consequat nec lorem nec pulvinar.
+
+* PUBLISHED Post with Headlines :random:lorem:headline:
+CLOSED: [2019-10-15 Tue 11:42]
+:PROPERTIES:
+:SUMMARY: Some text generated randomly.
+:END:
+
+** Paragraph One
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis ultricies sem sit amet laoreet. Morbi rutrum congue sapien eget interdum. Etiam luctus, tortor eget pellentesque lacinia, lacus quam tempor enim, eget dictum nisl lectus ut neque. Nullam a risus nisl. Aenean sit amet enim porttitor, porta ligula gravida, consequat lorem. Mauris nisi est, eleifend id magna et, dignissim dictum nibh. Morbi faucibus tristique eros, ac blandit turpis ultricies at. Aliquam erat volutpat. Aenean eget lorem id justo gravida fringilla. Vivamus eleifend, felis a congue porttitor, tortor metus pretium dui, et rutrum magna lacus id quam. Nulla eget faucibus nisl. Praesent eget commodo nisi, sit amet tempus justo. Phasellus eget molestie ligula, luctus fermentum felis. In eget sapien ut turpis lobortis pellentesque. Nam a malesuada lectus.
+
+** Paragraph Two
+Quisque hendrerit, nisl vel vulputate tempor, turpis sem cursus leo, vitae lacinia ex felis sed erat. Cras in tristique massa. In hac habitasse platea dictumst. Suspendisse eget lectus sed tellus egestas maximus vitae quis erat. Donec aliquet mattis orci, eu aliquet magna porta at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vestibulum sodales iaculis. Proin a dictum ex, a maximus erat. Vestibulum sagittis, orci egestas elementum imperdiet, leo dui hendrerit mauris, eget facilisis libero ipsum nec ligula. Aenean eget finibus dolor, ultricies fringilla est.
+
+** Paragraph Three
+Proin convallis elementum orci eu vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin at nibh porttitor mi feugiat placerat. Aliquam erat volutpat. Donec vulputate mollis volutpat. Integer facilisis, urna sed facilisis pretium, metus mi vehicula mi, dictum pharetra orci augue ac lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nisl nisi, consequat eu arcu eget, mattis iaculis lacus. Nulla mollis sapien tincidunt urna pharetra, ac tempus nunc venenatis. Pellentesque nec augue leo. Nulla facilisi.

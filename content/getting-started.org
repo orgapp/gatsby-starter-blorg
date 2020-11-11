@@ -1,0 +1,125 @@
+#+TITLE: Getting Started
+#+ORGA_PUBLISH_KEYWORD: PUBLISHED
+#+TODO: DRAFT | PUBLISHED
+
+* PUBLISHED Getting Started :tutorial:
+CLOSED: [2020-11-10 Tue 16:00]
+:PROPERTIES:
+:SUMMARY: when you are reading this from localhost, you can skip this part now.
+:END:
+
+When you are reading this post from =http://localhost:8000=, you can skip this one now...
+
+But if you are reading this org file directly. Here you go. Instead of pointing you to [[https://www.gatsbyjs.com/docs/quick-start/][gatsby's awesome official quick start page]], I am going to list all the necessary commands here, so you don't have to jump away.
+
+** Install Gatsby CLI
+#+BEGIN_SRC sh
+npm install -g gatsby-cli
+#+END_SRC
+
+** Create new site with this starter
+#+BEGIN_SRC shell
+gatsby new gatsby-site https://github.com/orgapp/gatsby-starter-blorg
+#+END_SRC
+
+** start up your site
+#+BEGIN_SRC shell
+cd gatsby-site
+yarn run develop
+#+END_SRC
+
+Now you have your site at http://localhost:8000.
+
+* PUBLISHED Config and Options :tutorial:
+CLOSED: [2020-11-10 Tue 15:55]
+:PROPERTIES:
+:SUMMARY:  Options for the plugin, explained
+:END:
+
+All configuration details are in your =gatsby-config.js= file.
+
+** Config
+
+** Options
+You can customize a set of options in your =gatsby-config.js= file. Here is the list.
+
+| Option               | Default Value                 |
+|----------------------+-------------------------------|
+| =basePath=           | '/'                           |
+| =contentPath=        | 'content'                     |
+| =filter=             | ''                            |
+| =pagination=         | 0                             |
+| =buildIndex=         | true                          |
+| =buildCategoryIndex= | true                          |
+| =buildTagIndex=      | true                          |
+| =slug=               | '$category/$export_file_name' |
+| =preset=             | '@theme-ui/preset-deep'       |
+
+*** =basePath=
+The base path for generated content, e.g. '/posts'.
+
+*** =contentPath=
+Where your org files located. You can use relative path like: =../notes=
+
+*** =filter=
+grpahql filter applied to your posts, e.g. =keyword: { eq: "PUBLISHED" }=. Take a look at [[https://www.gatsbyjs.com/docs/graphql-reference/][graphql query within gatsby]] if you want to do something fancy. Basically you can filter on any properties for a headline, with inherited file level settings.
+
+*** =pagination=
+If you have lots of posts, you are going to want to enable pagination. The value is max posts per page on the index pages. You will get slugs like =domain.com/1=, =domain.com/2= ... For category links =domian.com/emacs/1=, =domian.com/emacs/2=...
+
+*** =buildIndex=
+Whether or not to build index page.
+
+*** =buildCategoryIndex=
+Whether or not to build index page for categories. E.g. the [[http://localhost:8000/tutorial][localhost:8000/tutorial]].
+
+*** =buildTagIndex=
+Whether or not to build index page of posts grouped by tag.
+
+*** =slug=
+How to generate slug for posts. Parts start with =$= will be replaced by metadata of the post.
+
+*** =preset=
+[[https://theme-ui.com][theme-ui]] preset.
+
+
+* PUBLISHED About Your Org Files...
+CLOSED: [2020-11-10 Tue 15:50]
+
+You can organize your posts in two ways: per file or per headline.
+
+** File Based Posts
+
+You just simply create org files, give it a =#+TITLE= and a =#+DATE=. Add a =#+SUMMARY= if you want to. You have a post.
+
+** Headline Based Posts
+
+Tell Orga which headlines should be published via in buffer setting =#+ORGA_PUBLISH_KEYWORD=. It could be an array. Then the headlines with matching keyword will be consider posts.
+
+** Property Metadata Map
+Ordered by priority.
+
+#+CAPTION: essential property mapping
+| metadata field   | headline based               | file based           |
+|------------------+------------------------------+----------------------|
+| title            | headline content             | =#+TITLE=            |
+|                  | =EXPORT_TITLE=               |                      |
+|------------------+------------------------------+----------------------|
+| date             | =DATE=                       | =#+DATE=             |
+|                  | =EXPORT_DATE=                | =#+EXPORT_DATE=      |
+|                  | =PUBLISH_DATE=               | =#+PUBLISH_DATE=     |
+|                  | "CLOSED" planning timestamp  |                      |
+|------------------+------------------------------+----------------------|
+| category         | =CATEGORY=                   | =#+CATEGORY=         |
+|                  | file name                    |                      |
+|------------------+------------------------------+----------------------|
+| tags             | tags of headline             | N/A                  |
+|------------------+------------------------------+----------------------|
+| export_file_name | =EXPORT_FILE_NAME=           | =#+EXPORT_FILE_NAME= |
+|                  | headline content (sanitised) | file name            |
+|------------------+------------------------------+----------------------|
+| excerpt          | =EXCERPT=                    | =EXCERPT=            |
+|                  | =SUMMARY=                    | =SUMMARY=            |
+|                  | =DESCRIPTION=                | =DESCRIPTION=        |
+
+All other properties will be available for graphql queries.

@@ -1,0 +1,104 @@
+#+TITLE: Advanced
+#+ORGA_PUBLISH_KEYWORD: PUBLISHED
+#+TODO: DRAFT | PUBLISHED
+
+* PUBLISHED Customize the Theme :tutorial:
+CLOSED: [2020-11-10 Tue 15:45]
+:PROPERTIES:
+:SUMMARY:  How to change the colors and stuff.
+:END:
+
+Color theme is powered by [[https://theme-ui.com][theme-ui]], the same way [[https://github.com/gatsbyjs/themes/tree/master/packages/gatsby-theme-blog][the official markdown based blog theme]] is. There are 2 ways to customize the theme.
+
+** Use a Different [[https://theme-ui.com/packages/presets][Preset]]
+The default preset is [[https://theme-ui.com/presets/deep][deep]]. To use a different one, simply install the package.
+#+BEGIN_SRC sh
+npm install @theme-ui/preset-dark
+# or with yarn
+yarn add @theme-ui/preset-dark
+#+END_SRC
+And change the option (see details about [[Config and Options][Config and Options]]) defined in your =gatsby-config.js=, like so.
+#+BEGIN_SRC javascript
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-blorg`,
+      options: {
+        preset: `@theme-ui/preset-dark`,
+      },
+    },
+  ],
+}
+#+END_SRC
+
+** Tweak a Preset
+You can shadow the gatsby-plugin-theme-ui plugin to tweak on existing preset. Basically you can create a file within this project: =src/gatsby-plugin-theme-ui/index.js=, and go nuts in there. An example would look like this:
+#+BEGIN_SRC javascript
+// src/gatsby-plugin-theme-ui/index.js
+export default {
+  colors: {
+    text: '#111',
+    background: 'tomato',
+  },
+}
+#+END_SRC
+
+theme-ui is so powerful that itself is worth a lengthy article to talk about, if you are curious, take a look at the [[https://www.gatsbyjs.com/plugins/gatsby-plugin-theme-ui/][documentation from gatsby]] to learn more.
+
+** Change the Avatar
+Prepare a photo of yourself, use it to replace file =src/gatsby-theme-blorg/avatar.png=. The new file could be any of the following format: =jpeg=, =jpg=, =gif=, =png=. What it actually does is shadowing a file from the theme, which is the core technique for [[Advanced Customization][Advanced Customization]].
+
+* PUBLISHED Advanced Customization :tutorial:
+CLOSED: [2020-11-10 Tue 15:40]
+:PROPERTIES:
+:SUMMARY:  How to change every details you can think of.
+:END:
+
+Don't like my design? Rude, but I understand. You can change every aspect of the website to your heart content. The whole website is broken into sensible reusable components. You can "shadow" any of them to change how the corresponding parts look like.
+
+Take a look at [[https://github.com/orgapp/orgajs/tree/master/packages/gatsby-theme-blorg/src/components][all the components here]]. For example, to change the bio content, create a file =src/gatsby-theme-blorg/components/bio-content.js= (or =.tsx= if you like TypeScript better).
+
+#+BEGIN_SRC javascript
+// src/gatsby-theme-blorg/components/bio-content.js
+export default () =>
+  <p>
+    Hi, My name is XXX. Follow me on twitter <a href="https://twitter.com/xiaoxinghu">Here</a>.
+  </p>
+#+END_SRC
+
+Restart your gatsby server, you will see the change right away.
+
+You can fine grain every aspect of your website this way. All the files in the =components= folder can be "shadowed". Just mirror the path within this project, it will overwrite the default.
+
+You can also reference any of the default components within your customized ones. E.g.
+#+BEGIN_SRC javascript
+// src/gatsby-theme-blorg/components/layout.tsx
+/** @jsx jsx */
+import Header from 'gatsby-theme-blorg/src/components/header'
+import { Container, jsx, Styled } from 'theme-ui'
+
+export default ({ children }) => (
+  <Styled.root>
+    <Header title='My new title'/>
+    <div>
+      <h1>Hey, I just want to say hey.</h1>
+      { children }
+    </div>
+  </Styled.root>
+)
+#+END_SRC
+
+In the about example, you created your own =Layout= component, but you kept the default =Header= component from the theme.
+
+If you find yourself tweaking these components more than you would like to, or you have a problem with the design of the overall layout, or maybe the design philosophy is not matching what's in your mind, it's time for you to [[Create Your Website from Scratch][create your website from scratch]].
+
+* PUBLISHED Create Your Website from Scratch :tutorial:
+CLOSED: [2020-11-10 Tue 14:59]
+:PROPERTIES:
+:SUMMARY:  Laverage gatsby-theme-orga to create your perfect website from scratch.
+:END:
+
+The base theme for =gatsby-theme-blorg= is called =gatsby-theme-orga=. It is the core of the integration between [[https://orga.js.org][orgajs]] and [[https://www.gatsbyjs.com][gatsby]], without the opinionated look and feel. It is a good starting point when you want to have full control over the look and feel of your website. Take a look at the other starter project: [[https://github.com/orgapp/gatsby-starter-orga][gatsby-starter-orga]]. Basically what you get is all the page generation goodies, but with pages render the raw data as json. You can go from there and build up your own UI from scratch.
+
+Of cause, if you have to create websites over and over again, you can create a theme like gatsby-theme-blorg, and reuse it everywhere. Don't forget to let me know when you do. 😉

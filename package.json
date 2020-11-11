@@ -5,15 +5,16 @@
   "version": "1.0.0",
   "author": "Xiaoxing Hu <xiaoxing@huxx.org>",
   "dependencies": {
-    "gatsby": "^2.15.36",
-    "gatsby-theme-blorg": "^1.8.12",
+    "@theme-ui/preset-deep": "^0.3.0",
+    "gatsby": "^2.25.3",
+    "gatsby-theme-blorg": "^2.2.5",
     "prop-types": "^15.7.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^2.1.2"
   },
   "keywords": [
     "gatsby",
