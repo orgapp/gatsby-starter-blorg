@@ -1,6 +1,7 @@
 #+TITLE: Getting Started
-#+ORGA_PUBLISH_KEYWORD: PUBLISHED
+#+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
 #+TODO: DRAFT | PUBLISHED
+#+TODO: TODO | DONE
 
 * PUBLISHED Getting Started :tutorial:
 CLOSED: [2020-11-10 Tue 16:00]
@@ -82,8 +83,7 @@ How to generate slug for posts. Parts start with =$= will be replaced by metadat
 *** =preset=
 [[https://theme-ui.com][theme-ui]] preset.
 
-
-* PUBLISHED About Your Org Files...
+* DONE About Your Org Files...
 CLOSED: [2020-11-10 Tue 15:50]
 
 You can organize your posts in two ways: per file or per headline.
@@ -94,7 +94,7 @@ You just simply create org files, give it a =#+TITLE= and a =#+DATE=. Add a =#+S
 
 ** Headline Based Posts
 
-Tell Orga which headlines should be published via in buffer setting =#+ORGA_PUBLISH_KEYWORD=. It could be an array. Then the headlines with matching keyword will be consider posts.
+Tell Orga which headlines should be published via in buffer setting =#+ORGA_PUBLISH_KEYWORD=. It could be an array (separated by spaces). Then the headlines with matching keyword will be consider posts. Check out [[https://raw.githubusercontent.com/orgapp/gatsby-starter-blorg/master/content/getting-started.org][an example org file]] (yes, it's this page).
 
 ** Property Metadata Map
 Ordered by priority.
@@ -123,3 +123,19 @@ Ordered by priority.
 |                  | =DESCRIPTION=                | =DESCRIPTION=        |
 
 All other properties will be available for graphql queries.
+
+
+
+
+** =SELECT_TAGS= and =EXCLUDE_TAGS=
+[[https://orgmode.org/manual/Export-Settings.html][org-mode has these useful properties]] that can help you select or ignore sections when exporting your content into html. You can do the same with orgajs. There's actually another section after this one in the current org file, but you won't be able to see it because it's ignored with due to tag =noexport=. Again check out [[https://raw.githubusercontent.com/orgapp/gatsby-starter-blorg/master/content/getting-started.org][this org file]] for an real life example.
+
+| option       | default value | details                                                                    |
+|--------------+---------------+----------------------------------------------------------------------------|
+| SELECT_TAGS  | []            | when set (none-empty array), only sections with matching tags are included |
+| EXCLUDE_TAGS | ['noexport']  |                                                                            |
+
+I try to stick as close to org-mode syntax as possible. So array is always string separated by spaces. You can customize these settings on a per file basis, just like in org-mode.
+
+** You are not suppose to see this section :noexport:
+This section is ignored when building the website.
