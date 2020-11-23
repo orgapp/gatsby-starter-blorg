@@ -8,7 +8,7 @@ module.exports = {
     twitter: 'xiaoxinghu', // replace it, or set to 'false' to disable "Tweet this" button
     social: [ // again, replace thse with your own value, or set to empty array to disable them
       { name: 'twitter', url: 'https://twitter.com/xiaoxinghu' },
-      { name: 'website', url: 'https://huxiaoxing.com' },
+      { name: 'website', url: 'https://www.huxiaoxing.com' },
       { name: 'github', url: 'https://github.com/xiaoxinghu' },
     ]
   },
@@ -16,14 +16,16 @@ module.exports = {
     {
       resolve: `gatsby-theme-blorg`,
       options: {
-        // basePath: `/`,
-        // contentPath: `content`,
-        // pagination: 10,
-        // slug: '$category/$export_file_name',
-        // buildIndexPage: true,
-        // buildCategoryIndex: true,
-        // buildTagIndex: true,
-        // filter: 'keyword: { eq: "PUBLISHED" }',
+        // contentPath: 'content',
+        // filter: () => true,
+        // pagination: 5,
+        // columns: 2,
+        // indexPath: '/',
+        // imageMaxWidth: 1380,
+        // categoryIndexPath: category => `/${category}`,
+        // tagIndexPath: tag => `/:${tag}:`,
+        // slug: ({ export_file_name }) => `/${export_file_name}`,
+        // postRedirect: () => [],
       },
     },
   ],

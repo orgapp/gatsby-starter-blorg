@@ -1889,11 +1889,6 @@
   resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.3.0.tgz#853a78195beead04ece4391c5672d690899bec47"
   integrity sha512-bFCYoxfe/Ugr5k5BEy3Gv5jg8+idZHWDt/NM95jgla4qITlaOAMuEL6afoQ5HXbJjp5TnZFZ73qO6cKI8/BFfQ==
 
-"@theme-ui/preset-deep@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/preset-deep/-/preset-deep-0.3.0.tgz#acdf3028ef8dc5af2d20b5a82f9fed1062cf74d6"
-  integrity sha512-5XZckaa1nhm7afb57bCMGKR/TCaf9cjTwhNkfAaFjKVklVB4CCinS43zQ0sDadwd3oihCJmGbXyvgwBb8mp/iw==
-
 "@theme-ui/theme-provider@^0.4.0-rc.7":
   version "0.4.0-rc.7"
   resolved "https://registry.yarnpkg.com/@theme-ui/theme-provider/-/theme-provider-0.4.0-rc.7.tgz#c2879162192f0f02cd4ca9116836f146be768fda"
@@ -6608,10 +6603,10 @@ gatsby-telemetry@^1.5.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-theme-blorg@^2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-blorg/-/gatsby-theme-blorg-2.3.8.tgz#ef513a60648908144a58f2490dbffd4b8ebfccc2"
-  integrity sha512-jijC5f7U4GE50cno6ELZ7Gx2KOluZ0me3NwLPxsIBiBJY+uABnZ/1C8mFwM0lBGueZytf5R9NkCKVESSyl1KsA==
+gatsby-theme-blorg@^2.3.12:
+  version "2.3.12"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-blorg/-/gatsby-theme-blorg-2.3.12.tgz#390a2da6e391565888e931ff24743237e2016fd3"
+  integrity sha512-Cm/U7Ehg6Bnavyd3RlwygJ9NYft3rEp6cZN1jEMPOvHj8+BESmUsOQx8RL7oHgOfcZDV4SlUrBI81vhAVYdCPg==
   dependencies:
     gatsby-image "^2.2.30"
     gatsby-plugin-emotion "^4.1.12"
@@ -6620,7 +6615,7 @@ gatsby-theme-blorg@^2.3.8:
     gatsby-plugin-sharp "^2.2.32"
     gatsby-plugin-theme-ui "0.4.0-rc.5"
     gatsby-source-filesystem "^2.1.33"
-    gatsby-theme-orga "^2.3.8"
+    gatsby-theme-orga "^2.3.12"
     gatsby-transformer-sharp "^2.3.0"
     gatsby-transformer-toml "^2.2.15"
     highlight.js "^10.3.2"
@@ -6630,18 +6625,18 @@ gatsby-theme-blorg@^2.3.8:
     react-icons "^3.8.0"
     theme-ui "^0.4.0-rc.7"
 
-gatsby-theme-orga@^2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-orga/-/gatsby-theme-orga-2.3.8.tgz#6a7504b2dffe2eccb4c2b8013b4473a839816d53"
-  integrity sha512-X0pz/MMPLSPkVU0BXr55ep0h1PWm3pJEMo8mqlXoMlGuD7qurgKRjzVMFoJq9PNDkorkl/kfHcQDkYMUpYvvhA==
+gatsby-theme-orga@^2.3.12:
+  version "2.3.12"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-orga/-/gatsby-theme-orga-2.3.12.tgz#87ee2cd01b58db1e8c66f79c50b8511f0fe78392"
+  integrity sha512-4bHijGrKXyJMsE+P8O0SmUoYz9T3bvCToWL+IE9cEGtYtQeqfzjcYaqtzhwSVFu0pp3wYyxfJZaZGJEjSCySwQ==
   dependencies:
     gatsby-source-filesystem "^2.1.33"
-    gatsby-transformer-orga "^2.3.8"
+    gatsby-transformer-orga "^2.3.10"
 
-gatsby-transformer-orga@^2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-orga/-/gatsby-transformer-orga-2.3.8.tgz#e3351a36cbeb7d5291fa9522c5ce4f2d46514244"
-  integrity sha512-w6dBfay7K5DW0DZCLOGqp7ujIW8fp6kTIWh+aNm1+c/pdnOFX/f3JHHunYYnwtlGv+6pZStiRcQAx9eqGb9M4Q==
+gatsby-transformer-orga@^2.3.10:
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-orga/-/gatsby-transformer-orga-2.3.10.tgz#ac74b45c560fbd73c88dfb6fee56ab9aae5a1247"
+  integrity sha512-4wwA/S3WH0qFVupqpiNJZzjdQ+8BgmhiPvy9/ANHVH07kJ3tmjpuIDhQR7b6xBUVnMr9ARCZC3pftdnIiTCSJw==
   dependencies:
     bluebird "^3.7.0"
     gatsby-core-utils "^1.4.0"
@@ -6649,9 +6644,9 @@ gatsby-transformer-orga@^2.3.8:
     is-relative-url "^3.0.0"
     mime "^2.4.4"
     moment "^2.24.0"
-    oast-to-hast "^2.3.8"
-    orga "^2.3.8"
-    orga-posts "^2.3.8"
+    oast-to-hast "^2.3.9"
+    orga "^2.3.9"
+    orga-posts "^2.3.9"
     rehype-stringify "^8.0.0"
     unified "^9.1.0"
     unist-builder "^2.0.3"
@@ -9776,13 +9771,13 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-oast-to-hast@^2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/oast-to-hast/-/oast-to-hast-2.3.8.tgz#c4dfd9e94a8118ec19c312bbf42e2a9b59cee475"
-  integrity sha512-kC3sm9Hf0CVoHQJ24QJfMQnpU2sWha/Wp2DrdBeQUu1EYQmAC3vFDsfBeoKdua+T+kQ3FuS64EckyaUsmO4uBQ==
+oast-to-hast@^2.3.9:
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/oast-to-hast/-/oast-to-hast-2.3.9.tgz#7ee8e3911b25a31d04594c76e825fc5d73cbef71"
+  integrity sha512-p/pdBTE+k832eEpIU8mKD2CFfeByoM2ayJHN/W8AyWQ4B+aJXI/r6GeOd9rlfqEOl/66M6i/p7CBUqpwReA7Bw==
   dependencies:
     mime "^2.4.4"
-    orga "^2.3.8"
+    orga "^2.3.9"
     prismjs "^1.17.1"
     unist-builder "^2.0.3"
 
@@ -9994,16 +9989,16 @@ optionator@^0.8.3:
     type-check "~0.3.2"
     word-wrap "~1.2.3"
 
-orga-posts@^2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/orga-posts/-/orga-posts-2.3.8.tgz#d7316e585a1f3714c86587cb519a95b9cc323d14"
-  integrity sha512-K7bu0AOeKvwnLoJsyueMAdsvmkmdOQvDspuQyLVRqqN38AXe0yER2F87DiaQYaFQN0DskmQtTdv9amdVkNDpCA==
+orga-posts@^2.3.9:
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/orga-posts/-/orga-posts-2.3.9.tgz#0151bd965ac5e46d7c780242799a1c2e5e990f28"
+  integrity sha512-dz9lwKLNlp8cLwu+CY2gjjyOWLrxylsxE+tzyIjLV2Y13KgIgH1JBAbuECcGweuae5ZAfSL8o5KHnYLgwPCt+Q==
   dependencies:
     lodash "^4.17.20"
-    orga "^2.3.8"
+    orga "^2.3.9"
     rehype-highlight "^4.0.0"
     rehype-stringify "^8.0.0"
-    reorg-rehype "^2.3.8"
+    reorg-rehype "^2.3.9"
     unified "^9.2.0"
     unist-util-select "^3.0.2"
     unist-util-visit-parents "^3.1.1"
@@ -10015,10 +10010,10 @@ orga-theme-ui-preset@^2.3.8:
   dependencies:
     "@theme-ui/preset-base" "^0.3.0"
 
-orga@^2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/orga/-/orga-2.3.8.tgz#808d0b20622c6c5814a7f9342995e41811ec2d84"
-  integrity sha512-XuJeQIi1HNxkYh/2HDrqbRyb47D3pqnLBx0CUtV5g9yW3pD2wBzSG+YIkiTIT322aydm198LZYT/lUdqguLwzg==
+orga@^2.3.9:
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/orga/-/orga-2.3.9.tgz#d45ba0c3fc03fe073d914698b003ad26be3a34ed"
+  integrity sha512-G0X7JS2TgPuR1wc7Z+nKZHgQdhK3LVaxBGEsDFFfnSh7pBnWmi1kZkvbqqGwH9NrC/bCA+r/hyToX7VbakwMdg==
   dependencies:
     luxon "^1.19.3"
     text-kit "^2.3.8"
@@ -11031,10 +11026,15 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@^2.0.5, prettier@^2.1.2:
+prettier@^2.0.5:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
   integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
+
+prettier@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.0.tgz#8a03c7777883b29b37fb2c4348c66a78e980418b"
+  integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
 
 pretty-bytes@^5.1.0, pretty-bytes@^5.4.1:
   version "5.4.1"
@@ -11758,12 +11758,12 @@ renderkid@^2.0.4:
     lodash "^4.17.20"
     strip-ansi "^3.0.0"
 
-reorg-rehype@^2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/reorg-rehype/-/reorg-rehype-2.3.8.tgz#8a2473e37cbfa8c23ffdf550a9ad21703dfda4ce"
-  integrity sha512-RM5hvbfBdk48eWAqRTg+PqnP2KIM/afc5pzE9tbScJf1/TqZiQz/3Yo4FVVQ8igeneEFaLc814RR9XzhoAdMHg==
+reorg-rehype@^2.3.9:
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/reorg-rehype/-/reorg-rehype-2.3.9.tgz#28e640a65f2f397462c9616fb16ffe854efb7e2e"
+  integrity sha512-qhJSI/TP5TxDT+FGX/OHtcL4bvAuoopWt1aAJPh382oQcyWUx3sspAKa0u/vaoh/zKfdz7lIir08v2cGDLkxdQ==
   dependencies:
-    oast-to-hast "^2.3.8"
+    oast-to-hast "^2.3.9"
 
 repeat-element@^1.1.2:
   version "1.1.3"

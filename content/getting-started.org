@@ -3,10 +3,10 @@
 #+TODO: DRAFT | PUBLISHED
 #+TODO: TODO | DONE
 
-* PUBLISHED Getting Started :tutorial:
+* PUBLISHED First Thing First :tutorial:
 CLOSED: [2020-11-10 Tue 16:00]
 :PROPERTIES:
-:SUMMARY: when you are reading this from localhost, you can skip this part now.
+:SUMMARY: when you are reading this from =localhost=, you can skip this part now.
 :END:
 
 When you are reading this post from =http://localhost:8000=, you can skip this one now...
@@ -35,56 +35,110 @@ Now you have your site at http://localhost:8000.
 CLOSED: [2020-11-10 Tue 15:55]
 :PROPERTIES:
 :SUMMARY:  Options for the plugin, explained
+:ID:       049aea8c-19b4-40ba-940f-c52562d678cf
 :END:
 
 All configuration details are in your =gatsby-config.js= file.
 
-** Config
+** Site Metadata
+
+There's a set of website metadata to customize. You can customize it in =gatsby-config.js= file.
+#+BEGIN_SRC javascript
+siteMetadata: {
+  title: `Blog Title Placeholder`, // website default title
+  siteUrl: `https://orga.js.org`, // domain of your site
+  author: `Name Placeholder`, // your name
+  description: `Description placeholder`, // description of website, for SEO
+  twitter: 'xiaoxinghu', // your twitter handle, you can set it to false or ignore it to get rid of the "Tweet this." button
+  social: [ // your social badges, in your bio
+    { name: 'twitter', url: 'https://twitter.com/xiaoxinghu' },
+    { name: 'website', url: 'https://huxiaoxing.com' },
+    { name: 'email', url: 'mailto:contact@huxiaoxing.com' },
+  ],
+},
+#+END_SRC
+
+** Post Metadata
+Each post has a set of metadata. Here is how it looks like.
+#+BEGIN_SRC typescript
+interface Metadata {
+  title: string;
+  date: Date;
+  category: string;
+  tags: string[];
+  export_file_name: string;
+}
+#+END_SRC
+These are the mandatory properties, you can expand it by simply adding PROPERTIES to the headline or by adding in-buffer settings.
+
+E.g. in your org file:
+#+BEGIN_SRC org
+,* hello world
+  :PROPERTIES:
+  :IMAGE:    ./images/dog.png
+  :END:
+#+END_SRC
+You can find more details about Post Metadata in [[id:3c77e9cf-c23f-4a22-886c-c3b345d0b7d5][About Your Org Files]].
 
 ** Options
 You can customize a set of options in your =gatsby-config.js= file. Here is the list.
 
-| Option               | Default Value                 |
-|----------------------+-------------------------------|
-| =basePath=           | '/'                           |
-| =contentPath=        | 'content'                     |
-| =filter=             | ''                            |
-| =pagination=         | 0                             |
-| =buildIndex=         | true                          |
-| =buildCategoryIndex= | true                          |
-| =buildTagIndex=      | true                          |
-| =slug=               | '$category/$export_file_name' |
-| =preset=             | '@theme-ui/preset-deep'       |
-
-*** =basePath=
-The base path for generated content, e.g. '/posts'.
+| Option              | Type     | Default Value                                      |
+|---------------------+----------+----------------------------------------------------|
+| =contentPath=       | String   | 'content'                                          |
+| =filter=            | Function | =() => true=                                       |
+| =pagination=        | Number   | 0                                                  |
+| =columns=           | Number   | 2                                                  |
+| =indexPath=         | String   | '/'                                                |
+| =imageMaxWidth=     | Number   | 1380                                               |
+| =categoryIndexPath= | Function | =(category) => `/${category}`=                     |
+| =tagIndexPath=      | Function | =tag => `/:${tag}:`=                               |
+| =slug=              | Function | =({ export_file_name }) => `/${export_file_name}`= |
+| =postRedirect=      | Function | =() => []=                                         |
+| =preset=            | String   | 'orga-theme-ui-preset'                             |
 
 *** =contentPath=
-Where your org files located. You can use relative path like: =../notes=
+Where your org files located. You can use relative path like: =../notes=.
 
 *** =filter=
-grpahql filter applied to your posts, e.g. =keyword: { eq: "PUBLISHED" }=. Take a look at [[https://www.gatsbyjs.com/docs/graphql-reference/][graphql query within gatsby]] if you want to do something fancy. Basically you can filter on any properties for a headline, with inherited file level settings.
+A function that decides whether a =OrgContent= should be ignored. An example would be:
+#+BEGIN_SRC javascript
+{
+  resolve: `gatsby-theme-blorg`,
+  options: {
+    filter: ({ keyword }) => keyword === 'PUBLISHED' || keyword === 'DONE',
+    // other options...
+  },
+},
+#+END_SRC
+**** Parameters
+- Post Metadata
+**** Returns
+- =true= (include) or =false= (exclude)
 
 *** =pagination=
-If you have lots of posts, you are going to want to enable pagination. The value is max posts per page on the index pages. You will get slugs like =domain.com/1=, =domain.com/2= ... For category links =domian.com/emacs/1=, =domian.com/emacs/2=...
+If you have lots of posts, you are going to want to enable pagination. The value is max posts per page on the index pages. You will get slugs like =domain.com/1=, =domain.com/2= for the index pages. For category links =domian.com/emacs/1=, =domian.com/emacs/2=...
 
-*** =buildIndex=
-Whether or not to build index page.
+*** =columns=
+Number of columns for index pages.
 
-*** =buildCategoryIndex=
-Whether or not to build index page for categories. E.g. the [[http://localhost:8000/tutorial][localhost:8000/tutorial]].
+*** =indexPath=
+Path for index page. Set to =false= to disable.
 
-*** =buildTagIndex=
-Whether or not to build index page of posts grouped by tag.
+*** =categoryIndexPath=
+Category index page path. Parameter of the function is the category. Set to =false= to disable. Or return =false= conditionally to disable certain category.
 
 *** =slug=
-How to generate slug for posts. Parts start with =$= will be replaced by metadata of the post.
+Generate slug for posts, with post metadata as input.
 
 *** =preset=
 [[https://theme-ui.com][theme-ui]] preset.
 
-* DONE About Your Org Files...
+* DONE About Your Org Files
 CLOSED: [2020-11-10 Tue 15:50]
+:PROPERTIES:
+:ID:       3c77e9cf-c23f-4a22-886c-c3b345d0b7d5
+:END:
 
 You can organize your posts in two ways: per file or per headline.
 

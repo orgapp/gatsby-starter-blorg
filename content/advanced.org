@@ -10,14 +10,14 @@ CLOSED: [2020-11-10 Tue 15:45]
 
 Color theme is powered by [[https://theme-ui.com][theme-ui]], the same way [[https://github.com/gatsbyjs/themes/tree/master/packages/gatsby-theme-blog][the official markdown based blog theme]] is. There are 2 ways to customize the theme.
 
-** Use a Different [[https://theme-ui.com/packages/presets][Preset]]
-The default preset is [[https://theme-ui.com/presets/deep][deep]]. To use a different one, simply install the package.
+** DRAFT Use a Different [[https://theme-ui.com/packages/presets][Preset]]
+The default preset is [[https://github.com/orgapp/orgajs/tree/master/packages/orga-theme-ui-preset][orga-theme-ui-preset]]. To use a different one, simply install the package.
 #+BEGIN_SRC sh
 npm install @theme-ui/preset-dark
 # or with yarn
 yarn add @theme-ui/preset-dark
 #+END_SRC
-And change the option (see details about [[Config and Options][Config and Options]]) defined in your =gatsby-config.js=, like so.
+And change the option (see details in [[file:getting-started.org::*Config and Options][Config and Options]]) defined in your =gatsby-config.js=, like so.
 #+BEGIN_SRC javascript
 // gatsby-config.js
 module.exports = {
