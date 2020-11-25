@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `gatsby-starter-blorg`,
+  pathPrefix: `/gatsby-starter-blorg`,
   siteMetadata: {
     siteURL: 'https://orga.js.org', // replace this with your own domain
     title: `Gatsby With Orga`, // replace it with your own title
