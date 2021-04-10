@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_blorg=self.webpackChunkgatsby_starter_blorg||[]).push([[883],{3666:function(t,n,r){"use strict";r.r(n),r.d(n,{default:function(){return l}});r(7294);var u=r(3172),e=(r(612),r(3431)),l=function(){return(0,e.tZ)(u.Z,null,(0,e.tZ)("div",null,"Not Found"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-0c9540a4ec23dd027532.js.map
