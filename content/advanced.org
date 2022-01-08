@@ -101,4 +101,4 @@ CLOSED: [2020-11-10 Tue 14:59]
 
 The base theme for =gatsby-theme-blorg= is called =gatsby-theme-orga=. It is the core of the integration between [[https://orga.js.org][orgajs]] and [[https://www.gatsbyjs.com][gatsby]], without the opinionated look and feel. It is a good starting point when you want to have full control over the look and feel of your website. Take a look at the other starter project: [[https://github.com/orgapp/gatsby-starter-orga][gatsby-starter-orga]]. Basically what you get is all the page generation goodies, but with pages render the raw data as json. You can go from there and build up your own UI from scratch.
 
-Of cause, if you have to create websites over and over again, you can create a theme like gatsby-theme-blorg, and reuse it everywhere. Don't forget to let me know when you do. 😉
+Of course, if you have to create websites over and over again, you can create a theme like gatsby-theme-blorg, and reuse it everywhere. Don't forget to let me know when you do. 😉
